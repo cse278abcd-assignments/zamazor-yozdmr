@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Zamazor - Login</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="images/zamazor.ico">
+        
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="login.css" type="text/css">
+    </head>
+
+    <body>
+
+        <div class="ctgr">
+            <div class="welcome">
+                <header>Welcome to Zamazor!</header>
+                <p>The perfect place to see to all of your shopping needs.</p>
+                <div style="display:flex;justify-content:center;">
+                    <div class="welcome-sub">
+                        <h1>Browse</h1>
+                        <p>Look through our limited collection of items to find the perfect thing for you!</p>
+                    </div>
+                    <div class="welcome-sub">
+                        More stuff!
+                    </div>
+                    <div class="welcome-sub">
+                        Extra stuff!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-card">
+            <h1>Log In</h1><br>
+            <form action="login-success.cgi" method="POST">
+                <input type="text" name="username" placeholder="Username"><br>
+                <input type="password" name="password" placeholder="Password"><br>
+                <input type="submit" name="login" class="login login-submit" value="Login">
+            </form>
+
+            <h3 class="login-head">OR</h3>
+
+            <a class="login register" href="register.html">Register</a>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+
+div.ctgr {
+    width: 75%;
+    background-color: #F7F7F7;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+div.inner-ctgr {
+    margin-top: 10px;
+    padding: 20px 10px;
+    box-shadow: 1px 1px 2px #acacac inset;
+    border-radius: 10px;
+
+    transition-duration: 150ms;
+}
+
+div.inner-ctgr:hover {
+    background-color: #ebebeb;
+}
+
+div.scroll-box {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    border-radius: 12px;
+    background-color: rgb(221, 221, 221);
+}
+
+div.item-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+
+    margin-left: 60px;
+
+    background-color: rgb(221, 221, 221);
+    box-shadow: 1px 1px 2px #acacac inset;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+div.itembox {
+    display: inline-block;
+
+    width: 250px;
+
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+
+    padding: 10px;
+    margin: 10px;
+}
+
+div.mini-box {
+    background-color: rgb(221, 221, 221);
+    margin-top: 10px;
+    padding: 20px 15px;
+    box-shadow: 1px 1px 2px #acacac inset;
+    border-radius: 10px;
+
+    height: 200px;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
