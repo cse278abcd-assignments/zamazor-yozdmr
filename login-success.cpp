@@ -77,7 +77,7 @@ void printHead() {
     cout << "<html lang=\"en\">" << endl;
     cout << "<head><title>Zamazor - Confirmation</title>" << endl;
     cout << "<meta charset=\"utf-8\"><link rel=\"icon\" type=\"image/x-icon\""
-         << "href=\"images/zamazor.ico\">" << endl;
+         << "href=\"zamazor.ico\">" << endl;
     cout << "<link rel=\"stylesheet\" href=\"login.css\" type=\"text/css\"/>"
          << "</head>";
     cout << "<body><div class=\"login-card\">" << endl;

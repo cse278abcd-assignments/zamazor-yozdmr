@@ -64,7 +64,7 @@ int main() {
                             << "\">" << categories[i] << "</a>\n";
                     }
                     cout << "<a class = \"split\""
-                         << "href=\"account/confirm.html\">Account</a>\n" <<
+                         << "href=\"confirm.html\">Account</a>\n" <<
                     "</div>" << endl;
 
                 // The main body of the html code:
@@ -119,7 +119,7 @@ int main() {
 void printHead(mysqlpp::String name) {
     cout << "<head><title>Zamazor - " << name << "</title>" << endl;
     cout << "<meta charset=\"utf-8\"><link rel=\"icon\""
-         << "type=\"image/x-icon\" href=\"images/zamazor.ico\">" << endl;
+         << "type=\"image/x-icon\" href=\"zamazor.ico\">" << endl;
     cout << "<link rel=\"stylesheet\" href=\"newstyle.css\""
          << "type=\"text/css\" />";
     cout << "<link rel=\"stylesheet\" href=\"nav.css\" type=\"text/css\" />";

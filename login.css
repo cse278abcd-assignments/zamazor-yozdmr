@@ -1,11 +1,11 @@
 .login-card {
-  padding: 40px;
-  width: 274px;
-  background-color: #F7F7F7;
-  margin: 0 auto 10px;
-  border-radius: 6px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+    padding: 40px;
+    width: 274px;
+    background-color: #F7F7F7;
+    margin: 0 auto 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .login-card input[type=submit] {
@@ -16,8 +16,8 @@
 }
 
 .login-card input[type=text],
-        input[type=email],
-        input[type=password] {
+input[type=email],
+input[type=password] {
     height: 44px;
     font-size: 16px;
     width: 100%;
@@ -44,7 +44,7 @@
     color: #fff;
     text-shadow: 0 1px rgba(0, 0, 0, 0.1);
     background-color: rgb(53, 122, 232);
-    
+
     transition-duration: 150ms;
 }
 
@@ -86,6 +86,7 @@ h3.login-head {
     background-color: #808080;
 
 }
+
 div.return-link {
     text-align: center;
 }
@@ -96,7 +97,20 @@ div.return-link a {
 }
 
 div.welcome {
+    width: 75%;
+    background-color: #F7F7F7;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+div.category {
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 6px;
 }
 
 div.welcome-sub {
@@ -106,9 +120,9 @@ div.welcome-sub {
     box-shadow: 1px 1px 2px #acacac inset;
     padding: 12px 10px;
     margin: 10px;
+    width: 175px;
 }
 
-div.welcome header {
-    font-size: 30px;
-    font-weight: bold;
+div.welcome h1 {
+    font-size: 35px;
 }

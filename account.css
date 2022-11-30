@@ -1,0 +1,132 @@
+.sidenav {
+    width: 160px;
+    position: fixed;
+    /*top right bottom left*/
+    margin: 20px 0 0 20px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F7F7F7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow-x: hidden;
+    padding: 20px 10px 10px 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3c3c3c;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #000000;
+}
+
+.sidenav input[type="submit"] {
+    background-color: transparent;
+    border: none;
+
+    color: #3c3c3c;
+
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.sidenav input[type="submit"]:hover {
+    background-color: transparent;
+    border: none;
+
+    color: #3c3c3c;
+
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.checkout-box input[type="submit"] {
+    width: 750px;
+    background-color: #888888;
+}
+
+div.main {
+    background-color: #ebebeb;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 60%;
+    /*top right bottom left*/
+    margin: 20px 0 40px 220px;
+    padding: 20px 40px;
+}
+
+div.skinny {
+    margin: auto;
+    width: 15%;
+}
+
+input[type=submit] {
+    width: 80%;
+    height: 30px;
+    display: block;
+    margin: auto;
+    position: relative;
+
+    border: 0px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: rgb(145, 145, 145);
+}
+
+input[type=submit]:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+.main input[type=submit] {
+    width: 30%;
+    height: 30px;
+    margin: left;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 4px 12px;
+    box-sizing: border-box;
+}
+
+.main input[type=text],
+input[type=password],
+input[type=email] {
+    width: 25%;
+}
+
+div.cartitem-container {
+    width: 300px;
+}
+
+div.cartitem {
+    background-color: lightgrey;
+    box-shadow: 1px 1px 2px #acacac inset;
+
+    border-radius: 4px;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.webnav form {
+    margin: 0;
+    padding: 0;
+}

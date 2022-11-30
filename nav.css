@@ -32,6 +32,16 @@
     position: relative;
 }
 
+.webnav input[type="submit"] {
+    background-color: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .webnav a::after {
     content: "";
     position: absolute;
@@ -39,7 +49,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: rgb(172, 255, 255);
+    background: rgb(53, 122, 232);
 
     transform: scaleX(0);
     transform-origin: left;
@@ -70,4 +80,9 @@ a.active::after {
     width: 99%;
 
     border-radius: 0px;
+}
+
+.webnav form {
+    margin: 0;
+    padding: 0;
 }

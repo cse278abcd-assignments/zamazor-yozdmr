@@ -20,11 +20,11 @@ int main() {
     cout << "Content-type: text/html" << endl << endl;
     cout << "<html lang=\"en\">" << endl;
 
-    if (Get.find("category") != Get.end() && Get.find("sort") != Get.end()) {
+    if (Get.find("category") != Get.end() && Get.find("sort") != Get.end() && Get.find("userID") != Get.end()) {
         mysqlpp::Connection conn(false);
         if (conn.connect("cse278", "localhost", "cse278", "MonSepM1am1")) {
             mysqlpp::Query query = conn.query();
-            query << "SELECT * FROM 01671166_Products WHERE type = '"
+            query << "SELECT * FROM 01671166_Products WHERE qty > 0 AND type = '"
                     << Get["category"] << "' ORDER BY "
                     << Get["sort"] << ";" << endl;
             query.parse();
@@ -34,7 +34,7 @@ int main() {
                 cout << "<head><title>Zamazor - " << Get["category"]
                         << "</title>" << endl;
                 cout << "<meta charset=\"utf-8\"><link rel=\"icon\""
-                     << "type=\"image/x-icon\" href=\"images/zamazor.ico\">"
+                     << "type=\"image/x-icon\" href=\"zamazor.ico\">"
                      << endl;
                 cout << "<link rel=\"stylesheet\" href=\"newstyle.css\""
                      << "type=\"text/css\" />";
@@ -74,9 +74,32 @@ int main() {
                                  << Get["userID"] << "\">"
                                  << categories[i] << "</a>\n";
                         }
-                        cout << "<a class=\"split\" "
-                             << "href=\"account/confirm.html\">"
-                             << "Account</a>\n</div>" << endl;
+
+                        query.reset();
+                        query << "SELECT pID, qty FROM 01671166_CartInv WHERE userID = '"
+                                << Get["userID"] << "';";
+                        query.parse();
+                        mysqlpp::StoreQueryResult cartitems = query.store();
+                        double totalCost = 0;
+                        for (int i = 0; i < cartitems.num_rows(); i++) {
+                            query.reset();
+                            query << "SELECT price FROM 01671166_Products WHERE pID = '"
+                                    << cartitems[i]["pID"] << "';";
+                            query.parse();
+                            mysqlpp::StoreQueryResult item = query.store();
+                            double itemCost = item[0]["price"];
+                            int itemQty = cartitems[i]["qty"];
+                            totalCost += (itemCost*itemQty);
+                        }
+                        cout << "<a class=\"split\"><form action=\"account.cgi\" method=\"POST\">"
+                             << "<input type=\"hidden\" name=\"username\" value=\""
+                                    << uinfo[0]["username"] << "\">"
+                             << "<input type=\"hidden\" name=\"password\" value=\"" 
+                                    << uinfo[0]["password"] << "\">"
+                             << "<input type=\"submit\" value=\"Account\">"
+                             << "</form></a>\n";
+                        cout << "\n<a class=\"split\" href=\"cart.cgi?userID="<<Get["userID"]<<"\">Cart ($"<<totalCost<<")</a>\n"
+                             << "</div>\n";
                 } else {
                     cout << "Bad user query" << endl;
                 }
@@ -103,8 +126,8 @@ int main() {
                 cout << "</div>\n<div class=\"item-view col-9\">\n";
                 for (int i = 0; i < result.num_rows(); i++) {
                     cout << "<a href=\"product.cgi?pID=" << result[i]["pID"]
-                            << "&userID=" << Get["userID"]
-                            << "\"><div class=\"itembox\">\n"
+                        << "&userID=" << Get["userID"]
+                        << "\"><div class=\"itembox\">\n"
                         << "<h4>" << result[i]["name"] << "</h4>\n"
                         << "<p>" << result[i]["type"] << "</p>"
                         << "<p>From " << result[i]["brand"] << "</p>"

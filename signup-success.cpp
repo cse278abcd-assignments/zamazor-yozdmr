@@ -38,12 +38,12 @@ int main() {
             mysqlpp::Query query = conn.query();
             query << "INSERT INTO 01671166_Users (username, email, password, "
                   << "firstName, lastName, address, city, "
-                  << "state, zipcode, permissions) "
+                  << "state, zipcode) "
                   << "VALUES ('" << Post["username"] << "', '" << Post["email"]
                   << "', '" << Post["password"] << "', '" << Post["first_name"]
                   << "', '" << Post["last_name"] << "', '" << Post["address"]
                   << "', '" << Post["city"] << "', '" << Post["state"] << "', "
-                  << Post["zipcode"] << ", 0)";
+                  << Post["zipcode"] << ")";
             query.parse();
             mysqlpp::SimpleResult result = query.execute();
 
@@ -96,7 +96,7 @@ void printHead() {
     cout << "<html lang=\"en\">" << endl;
     cout << "<head><title>Zamazor - Account Created</title>" << endl;
     cout << "<meta charset=\"utf-8\"><link rel=\"icon\" type=\"image/x-icon\""
-         << "href=\"images/zamazor.ico\">" << endl;
+         << "href=\"zamazor.ico\">" << endl;
     cout << "<link rel=\"stylesheet\" href=\"login.css\""
          << "type=\"text/css\"/>\n</head>\n";
     cout << "<body><div class=\"login-card\">" << endl;
